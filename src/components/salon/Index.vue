@@ -2,8 +2,8 @@
     <main><!--main Start --> 
 			<section class="section-group lis-10 salon-ad">
 				<div class="container">
-          <h2 class="f-l c-white" data-aos="zoom-in" data-aos-delay="200"> 链英沙龙 </h2>
-          <h3 class="f-l c-white" data-aos="zoom-in" data-aos-delay="300"> 精英交互的块链交互平台 </h3>
+                    <h2 class="f-l c-white" data-aos="zoom-in" data-aos-delay="200"> 链英沙龙 </h2>
+                    <h3 class="f-l c-white" data-aos="zoom-in" data-aos-delay="300"> 精英交互的块链交互平台 </h3>
 				</div>
 			</section>
 			
