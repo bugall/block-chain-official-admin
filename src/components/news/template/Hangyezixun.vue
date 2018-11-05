@@ -4,7 +4,7 @@
         <div class="f-l div-c showMoreNChildren">
     		<li class="f-l bgcgray1-h" v-for="article in articleList" :key="article.id">
     			<div class="f-l div-c">
-    				<a href="#" class="f-l ">
+    				<a :href="`/#/news/detail/${article.id}?type=xinwenzhongxin,hangye`" class="f-l ">
     					<em class="f-l em-t bgc-green tran-sition"></em>
     					<h2 class="f-l c-navy"> {{ article.title }} </h2>
     					<p class="f-l p-text c-gray">

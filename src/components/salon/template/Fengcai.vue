@@ -2,14 +2,14 @@
     <ul class="f-l listab-2"><!-- Salon style  -->
         <div class="f-l lis-subteb">
             <ul class="c-box">
-          	    <li @click="tabClick" data-type="wenzhang" class="f-l tab-item c-gray3" :class="tab === 'wenzhang' ? 'active' : ''"> 沙龙文章   </li>
-          	    <li @click="tabClick" data-type="tupian" class="f-l tab-item c-gray3" :class="tab === 'tupian' ? 'active' : ''"> 沙龙图片   </li>
+          	    <li @click="tabClick" data-type="wenzhang" class="f-l tab-item c-gray3" :class="tab === 'wenzhang' ? 'active' : ''">{{ $t("salon.wenzhang") }} </li>
+          	    <li @click="tabClick" data-type="tupian" class="f-l tab-item c-gray3" :class="tab === 'tupian' ? 'active' : ''"> {{ $t("salon.tupian") }} </li>
             </ul>
             <div class="f-l products"><!-- Salon article  -->
                 <div class="f-l div-item selected listab-2c" v-if="this.tab === 'wenzhang'">
                     <ul class="f-l showMoreNChildren" >
 					    <li class="f-l" v-for="article in articleList" :key="article.id">
-						    <a :href="`/#/salon/fengcai/article/${article.id}`" class="f-l pic">
+						    <a :href="`/#/salon/detail/${article.id}?type=salon,fengcai,wenzhang`" class="f-l pic">
 							    <img :src="article.banner" class="f-l tran-sition" />
 						    </a>
 							<div class="f-l div-c"> 
@@ -56,6 +56,7 @@
                 tab: 'wenzhang',
                 category: ['salon', 'fengcai'],
                 articleList: [],
+                totalItems: 0,
                 page: 1,
                 perPage: 10
             };

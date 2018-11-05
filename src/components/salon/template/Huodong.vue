@@ -5,7 +5,7 @@
         <div class="f-l div-c showMoreNChildren">
           <li class="f-l" v-for='article in articleList' :key="article.id">
           	<div class="l-box">
-          		<a :href="`/#/salon/detail/${article.id}`" class="f-l pic"><em class="f-l em bgc-gray2"></em><img :src="article.banner" class="f-r" /></a>
+          		<a :href="`/#/salon/detail/${article.id}?type=salon,huodong`" class="f-l pic"><em class="f-l em bgc-gray2"></em><img :src="article.banner" class="f-r" /></a>
           		<h4 class="f-l c-gray"> {{ article.title }} </h4>
           	</div>
             
@@ -14,11 +14,11 @@
           		<p class="f-l p-text c-gray">
                     {{ article.description }}
           		</p>
-          		<time class="f-l c-navy"><span class="f-l c-gray"> 时间: </span>  {{ article.btime }} ~ {{ article.etime }}  </time>
+          		<time class="f-l c-navy"><span class="f-l c-gray"> {{ $t("common.time") }}: </span>  {{ article.btime }} ~ {{ article.etime }}  </time>
           		<address class="f-l c-navy">
-          		  <span class="f-l c-gray"> 地点: </span> {{ article.address }}
+          		  <span class="f-l c-gray"> {{ $t("common.address") }}: </span> {{ article.address }}
           		</address>
-          		<a :href="`/#/salon/detail/${article.id}`" class="f-l tran-sition btn-activitystart"> 详情  </a>
+          		<a :href="`/#/salon/detail/${article.id}?type=salon,huodong`" class="f-l tran-sition btn-activitystart">{{ $t("common.detail") }} </a>
           	</div>              	
           </li>
         </div>

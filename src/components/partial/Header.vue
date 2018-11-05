@@ -6,16 +6,16 @@
 		      <div class="l-box"><a href="#" class="f-l t-logo"><img src="static/images/t-logo.png" class="f-l" /></a></div>
 		       <div class="r-box">                
 				 	<nav class="f-l">
-              <a  @click="navTabClick" data-type="index"  class="f-l c-white" :class="{current: currentTab=='index'}">  首页 <em class="em tran-sition transform-scale"></em></a> 
-              <a  @click="navTabClick" data-type="salon" class="f-l c-white" :class="{current: currentTab=='salon'}"> 链英沙龙 <em class="em tran-sition transform-scale"></em></a> 
-              <a  @click="navTabClick" data-type="talent" class="f-l c-white" :class="{current: currentTab=='talent'}" > 区块链人才库 <em class="em tran-sition transform-scale"></em></a> 
-              <a  @click="navTabClick" data-type="areas" class="f-l c-white" :class="{current: currentTab=='areas'}"> 研究领域 <em class="em tran-sition transform-scale"></em></a>
-              <a  @click="navTabClick" data-type="technological" class="f-l c-white" :class="{current: currentTab=='technological'}"> 科技前沿 <em class="em tran-sition transform-scale"></em></a>
-              <a  @click="navTabClick" data-type="news" class="f-l c-white" :class="{current: currentTab=='news'}"> 新闻中心 <em class="em tran-sition transform-scale"></em></a>
-              <a  @click="navTabClick" data-type="about" class="f-l c-white" :class="{current: currentTab=='about'}"> 关于我们 <em class="em tran-sition transform-scale"></em></a>
+              <a  @click="navTabClick" data-type="index"  class="f-l c-white" :class="{current: currentTab=='index'}">  {{ $t("header.index") }} <em class="em tran-sition transform-scale"></em></a> 
+              <a  @click="navTabClick" data-type="salon" class="f-l c-white" :class="{current: currentTab=='salon'}"> {{ $t("header.salon") }} <em class="em tran-sition transform-scale"></em></a> 
+              <a  @click="navTabClick" data-type="talent" class="f-l c-white" :class="{current: currentTab=='talent'}" > {{ $t("header.talent") }} <em class="em tran-sition transform-scale"></em></a> 
+              <a  @click="navTabClick" data-type="areas" class="f-l c-white" :class="{current: currentTab=='areas'}"> {{ $t("header.yanjiu") }} <em class="em tran-sition transform-scale"></em></a>
+              <a  @click="navTabClick" data-type="technological" class="f-l c-white" :class="{current: currentTab=='technological'}"> {{ $t("header.qianyan") }} <em class="em tran-sition transform-scale"></em></a>
+              <a  @click="navTabClick" data-type="news" class="f-l c-white" :class="{current: currentTab=='news'}"> {{ $t("header.news") }} <em class="em tran-sition transform-scale"></em></a>
+              <a  @click="navTabClick" data-type="about" class="f-l c-white" :class="{current: currentTab=='about'}"> {{ $t("header.about") }} <em class="em tran-sition transform-scale"></em></a>
             </nav>
 				    <div class="f-l lang-box"> 	 
-				    <a href="en-index.html" class="f-l c-white c-green-h"><img src="static/images/pic/English-pic.jpg" class="f-l pic" /> English </a> 
+				    <a @click="switchLanguage" class="f-l c-white c-green-h"><img :src="`static/images/pic/${this.language === 'zh' ? 'English' : 'China'}-pic.jpg`" class="f-l pic" /> {{ this.language === 'zh' ? 'English' : '中文'}} </a> 
 			    </div>
 		      </div>
 	      </div> 
@@ -26,6 +26,7 @@
 
 <script>
     import { mapGetters } from 'vuex';
+    import { get_item, set_item } from '@/services/CommonService';
 
     const routerMapping = {
         '0': '/',
@@ -38,8 +39,14 @@
         data () {
             return {
                 search: '',
-                currentTab: 'index'
+                currentTab: 'index',
+                language: 'zh'
             };
+        },
+        mounted () {
+            const tmp = get_item('language');
+            this.language = tmp || this.language;
+            this._i18n.locale = this.language;
         },
         created () {
         },
@@ -71,7 +78,9 @@
                 this.setKeywords({keywords: this.search});
             },
             switchLanguage (locale) {
-                this._i18n.locale = locale;
+                this.language = this.language === 'zh' ? 'en' : 'zh';
+                set_item('language', this.language);
+                this._i18n.locale = this.language;
             },
             clearInput () {
                 this.setKeywords({keywords: ''});

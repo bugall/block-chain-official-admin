@@ -4,7 +4,7 @@
            	<main><!--main Start --> 
 			<section class="section-group lis-1">
 				<div class="container">
-          <h2 class="f-l c-white" data-aos="zoom-in" data-aos-delay="200"> 开放式研究，链动区块链世界入口，慧聚全球最顶尖的行业领袖 </h2>
+          <h2 class="f-l c-white" data-aos="zoom-in" data-aos-delay="200"> {{ $t("index.banner.first") }} </h2>
           <h3 class="f-l c-green"  data-aos="zoom-in" data-aos-delay="300"> Open research, chaining block chain worldentrance, Hui Hui is the world's leading industry leader. </h3>
 				  <div class="animation-box" data-aos="zoom-in" data-aos-delay="400">
 				    <img src="static/images/animation1-1.png"  class="f-l animation1-img" />
@@ -24,20 +24,20 @@
 			
 			<section class="section-group lis-2">
 				<div class="container">
-          <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe9f8; </i> 链英沙龙 </h1>
+          <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe9f8; </i> {{ $t("header.salon") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> 往期回顾 </a>
+						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.backWatch") }} </a>
 					</div>        
           <h3 class="f-l c-gray">
-          	全球区块链行业领袖互动的交流平台，聚焦落地，探索应用首届链英少龙诚挚邀请您参与
+          	{{ $t("index.salonDetail") }}
           </h3>
           <div class="c-box">
           	<div class="l-box lis-2l" data-aos="zoom-in" data-aos-delay="200">
           		<h2 class="f-l c-navy"> 
-          			“聚焦落地 探索应用”首届链英沙龙诚挚邀请您参与
+          			{{ $t("index.joinDetail") }}
               </h2>
-              <a href="#" class="btn-1 bgc-blue1 bgc-green1-h c-white tran-sition"> 我要报名 </a>
-              <time class="f-l c-gray"> 2017-08-20 14:00 至 2017-08-20 18:00  </time>
+              <a href="#" class="btn-1 bgc-blue1 bgc-green1-h c-white tran-sition"> {{ $t("index.joinApply") }} </a>
+              <time class="f-l c-gray"> 2017-08-20 14:00 ~ 2017-08-20 18:00  </time>
           	</div>
           	<div class="r-box" data-aos="zoom-in" data-aos-delay="300">
           		<div class="animation-box">
@@ -47,23 +47,16 @@
           			<img src="static/images/animation2-4.png"  class="f-l img animation4-img" />
           			<img src="static/images/animation2-5.png"  class="f-l img animation5-img" />
           		</div>
-          	</div> 
-          	<div class="l-box lis-2r" data-aos="zoom-in" data-aos-delay="200">
-          		<h2 class="f-l c-blue"> 
-          			“聚焦落地 探索应用”首届链英沙龙诚挚邀请您参与
-              </h2>
-              <a href="#" class="btn-1 bgc-blue1 bgc-green1-h c-white tran-sition"> 我要报名 </a>
-              <time class="f-l c-gray"> 2017-08-20 14:00 至 2017-08-20 18:00  </time>
-          	</div>	      	
+          	</div>   	
           </div>
 				</div>
 			</section>
 			
  			<section class="section-group lis-3">
 				<div class="container">
-          <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe6bc; </i> 沙龙风采 </h1>
+          <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe6bc; </i> {{ $t("index.fengcai") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> 更&nbsp;&nbsp;多  <i class="iconfont"> &#xe606; </i></a>
+						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
 					</div> 
 					<div class="c-box">
 						<ul class="f-l">
@@ -104,9 +97,9 @@
 			
  			<section class="section-group lis-4">
 				<div class="container">
-          <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe643; </i> 区块链资讯 </h1>
+          <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe643; </i> {{ $t("index.zixun") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> 更&nbsp;&nbsp;多  <i class="iconfont"> &#xe606; </i></a>
+						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
 					</div> 
 					<div class="c-box" data-aos="fade-right" data-aos-delay="200">
 						<ul class="f-l">							
@@ -175,9 +168,9 @@
 			
  			<section class="section-group lis-5">
 				<div class="container">
-          <h1 class="f-l c-white"><i class="iconfont lis-icon"> &#xe89d; </i> 行业资讯 </h1>
+          <h1 class="f-l c-white"><i class="iconfont lis-icon"> &#xe89d; </i> {{ $t("index.hangyezixun") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> 更&nbsp;&nbsp;多  <i class="iconfont"> &#xe606; </i></a>
+						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
 					</div> 
 					<div class="c-box" data-aos="fade-left" data-aos-delay="200">
 						<div class="l-box">
@@ -226,9 +219,9 @@
 			
  			<section class="section-group lis-6">
 				<div class="container">
-          <h1 class="f-l c-navy"><i class="iconfont lis-icon"> &#xe607; </i> 区块链专家及行业领袖 </h1>
+          <h1 class="f-l c-navy"><i class="iconfont lis-icon"> &#xe607; </i> {{ $t("index.zhuanjia") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> 更&nbsp;&nbsp;多  <i class="iconfont"> &#xe606; </i></a>
+						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.more") }} <i class="iconfont"> &#xe606; </i></a>
 					</div> 
 					<div class="c-box">
 					  <ul class="f-l">
@@ -299,9 +292,9 @@
 			
  			<section class="section-group lis-7">
 				<div class="container">
-          <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe9b4; </i> 技术精华 </h1>
+          <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe9b4; </i> {{ $t("index.jinghua") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> 更&nbsp;&nbsp;多  <i class="iconfont"> &#xe606; </i></a>
+						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
 					</div> 
 					<div class="c-box">
 						<ul class="f-l">
@@ -339,12 +332,12 @@
 			
  			<section class="section-group lis-8">
 				<div class="container">
-				  <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe67f; </i> 加入我们</h1>
+				  <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe67f; </i> {{ $t("index.join") }}</h1>
 					<div class="c-box" data-aos="zoom-in" data-aos-delay="200">
           	<div class="l-box lis-8l">
-          		<h2 class="f-l c-navy"> 汇聚精英 </h2>
-          		<h3 class="f-l c-gray"> 遇见更多知己！燃不尽的是你对区块链的热情 </h3>
-              <a href="#" class="btn-1 bgc-blue1 bgc-green1-h c-white tran-sition"> 立即前往 </a>
+          		<h2 class="f-l c-navy"> {{ $t("index.huiju") }} </h2>
+          		<h3 class="f-l c-gray"> {{ $t("index.huijudetail") }} </h3>
+              <a href="#" class="btn-1 bgc-blue1 bgc-green1-h c-white tran-sition"> {{ $t("index.go") }} </a>
           	</div>
 						<div class="r-box">
 							<div class="animation-box">
@@ -359,18 +352,13 @@
 							  <img src="static/images/animation8-9.png" class="f-l img animation9-img " /> 
 							</div>
 						</div>
-          	<div class="l-box lis-8r">
-          		<h2 class="f-l c-blue"> 汇聚精英 </h2>
-          		<h3 class="f-l c-gray"> 遇见更多知己！燃不尽的是你对区块链的热情 </h3>
-              <a href="#" class="btn-1 bgc-blue1 bgc-green1-h c-white tran-sition"> 立即前往 </a>
-          	</div>					
 					</div> 
 				</div>
 			</section>
 			
  			<section class="section-group lis-9">
 				<div class="container">
-          <h1 class="f-l c-white"><i class="iconfont lis-icon"> &#xe697; </i> 友情链接 </h1>
+          <h1 class="f-l c-white"><i class="iconfont lis-icon"> &#xe697; </i> {{ $t("index.youqing") }} </h1>
 					<div class="c-box">
 					  <ul class="f-l">
 					  	<li class="f-l" data-aos="zoom-in" data-aos-delay="200"><a href="#" class="f-l pic-img"><img src="static/images/pic/a9-1.png"  class="f-l tran-sition" /></a></li>

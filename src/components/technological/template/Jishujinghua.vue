@@ -3,7 +3,7 @@
     <ul class="f-l listab-6"><!-- Technical essence  -->
         <div class="f-l div-c showMoreNChildren">
           <li class="f-l" v-for='article in articleList' :key="article.id">
-        	  <a :href="`/#/technological/detail/${article.id}`" class="f-l pic">
+        	  <a :href="`/#/technological/detail/${article.id}?type=kejiqianyan,jinghua`" class="f-l pic">
         		  <img :src="article.banner" class="f-l tran-sition" />
         	  </a>
         	  <div class="f-l div-b"> 

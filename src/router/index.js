@@ -24,7 +24,15 @@ const router = new Router({
         name: 'Salon',
         component: Salon
     }, {
+        path: '/salon/detail/:id',
+        name: 'Salon',
+        component: Salon
+    }, {
         path: '/talent',
+        name: 'talent',
+        component: Talent
+    }, {
+        path: '/talent/detail/:id',
         name: 'talent',
         component: Talent
     }, {
@@ -36,7 +44,15 @@ const router = new Router({
         name: 'technological',
         component: Technological
     }, {
+        path: '/technological/detail/:id',
+        name: 'technological_detail',
+        component: Technological
+    }, {
         path: '/news',
+        name: 'news',
+        component: News
+    }, {
+        path: '/news/detail/:id',
         name: 'news',
         component: News
     }, {

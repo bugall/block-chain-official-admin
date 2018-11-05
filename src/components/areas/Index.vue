@@ -2,25 +2,25 @@
 <main><!--main Start --> 
 			<section class="section-group lis-10 areas-ad">
 				<div class="container">
-          <h2 class="f-l c-white" data-aos="zoom-in" data-aos-delay="200"> 研究领域 </h2>
-          <h3 class="f-l c-white" data-aos="zoom-in" data-aos-delay="300"> 把握行业发展脉搏，深耕场景链接未来  </h3>
+          <h2 class="f-l c-white" data-aos="zoom-in" data-aos-delay="200"> {{ $t("areas.banner.first") }} </h2>
+          <h3 class="f-l c-white" data-aos="zoom-in" data-aos-delay="300">{{ $t("areas.banner.second") }} </h3>
 				</div>
 			</section>
 			
 			<section class="section-group listab-box">
 				<div class="container">
           <div class="f-l c-box tab-box">
-          	<div class="f-l hd bgc-white zh-tabhd-7">
+          	<div class="f-l hd bgc-white" :class="this._i18n.locale === 'en' ? 'en-tabhd-7' : 'zh-tabhd-7'">
           		<ul class="f-l">
-          			<li class="f-l c-gray3 on"> 研究领域   <em class="f-l em tran-sition transform-scale"></em></li>
+          			<li class="f-l c-gray3 on"> {{ $t("areas.yanjiu") }}   <em class="f-l em tran-sition transform-scale"></em></li>
           		</ul>
           	</div>
 				    <div class="c-box lis-11">
 	            <div class="c-box slide-menu">
-		            <h2 class="f-l c-navy"> 区块链应用场景研究 </h2>
+		            <h2 class="f-l c-navy"> {{ $t("areas.yingyongchangjing") }} </h2>
 		          	<h3 class="f-l c-gray" data-type="jinrong" @click="navTabClick" :class="currentTab === 'jinrong' ? 'on' : ''">
                           <i data-type="jinrong" class="f-l iconfont i-l"> &#xe89d; </i>
-                          <span data-type="jinrong"  class="f-l"> 街区链与金融  </span>
+                          <span data-type="jinrong"  class="f-l"> {{ $t("areas.jinrong") }}  </span>
                           <i data-type="jinrong"  class="iconfont f-r i-r tran-sition"> &#xe629; </i>
                     </h3>
 		          	<ul class="f-l" v-if="currentTab === 'jinrong'">
@@ -37,7 +37,7 @@
 		          	</ul>
 		          	<h3 class="f-l c-gray" data-type="puhuijinrong" @click="navTabClick"  :class="currentTab === 'puhuijinrong' ? 'on' : ''">
                           <i data-type="puhuijinrong" class="f-l iconfont i-l"> &#xe636; </i>
-                          <span data-type="puhuijinrong" class="f-l"> 区块链与普惠金融  </span>
+                          <span data-type="puhuijinrong" class="f-l"> {{ $t("areas.puhuijinrong") }}  </span>
                           <i data-type="puhuijinrong" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
                     </h3>
 		          	<ul class="f-l" v-if="currentTab === 'puhuijinrong'">
@@ -54,7 +54,7 @@
 		          	</ul>       
 		          	<h3 class="f-l c-gray" data-type="nongye" @click="navTabClick($event)" :class="currentTab === 'nongye' ? 'on' : ''">
                           <i data-type="nongye" class="f-l iconfont i-l"> &#xe61b; </i>
-                          <span data-type="nongye" class="f-l"> 街区链与农业资源数字化  </span>
+                          <span data-type="nongye" class="f-l"> {{ $t("areas.nongye") }}  </span>
                           <i data-type="nongye" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
                     </h3>
 		          	<ul class="f-l"  v-if="currentTab === 'nongye'">
@@ -71,7 +71,7 @@
 		          	</ul>     
 		          	<h3 class="f-l c-gray" data-type="jiaoyu" @click="navTabClick" :class="currentTab === 'jiaoyu' ? 'on' : ''" >
                           <i data-type="jiaoyu" class="f-l iconfont i-l"> &#xe615; </i>
-                          <span data-type="jiaoyu" class="f-l"> 街区链与教育  </span>
+                          <span data-type="jiaoyu" class="f-l"> {{ $t("areas.jiaoyu") }}  </span>
                           <i data-type="jiaoyu" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
                     </h3>
 		          	<ul class="f-l" v-if="currentTab === 'jiaoyu'">
@@ -88,7 +88,7 @@
 		          	</ul>  
 		          	<h3 class="f-l c-gray" data-type="jiankang" @click="navTabClick($event)"  :class="currentTab === 'jiankang' ? 'on' : ''">
                           <i data-type="jiankang" class="f-l iconfont i-l"> &#xe67e; </i>
-                          <span data-type="jiankang" class="f-l"> 区块链与健康  </span>
+                          <span data-type="jiankang" class="f-l"> {{ $t("areas.jiankang") }}  </span>
                           <i data-type="jiankang" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
                     </h3>
 		          	<ul class="f-l"  v-if="currentTab === 'jiankang'">
@@ -105,7 +105,7 @@
 		          	</ul>  
 		          	<h3 class="f-l c-gray" data-type="chanquan" @click="navTabClick($event)" :class="currentTab === 'chanquan' ? 'on' : ''">
                           <i data-type="chanquan" class="f-l iconfont i-l"> &#xe60b; </i>
-                          <span data-type="chanquan" class="f-l"> 街区链与知识产权保护  </span>
+                          <span data-type="chanquan" class="f-l"> {{ $t("areas.chanquan") }}  </span>
                           <i data-type="chanquan" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
                     </h3>
 		          	<ul class="f-l"  v-if="currentTab === 'chanquan'">
@@ -122,7 +122,7 @@
 		          	</ul>  
 		          	<h3 class="f-l c-gray" data-type="zhengfu" @click="navTabClick($event)"  :class="currentTab === 'zhengfu' ? 'on' : ''">
                           <i data-type="zhengfu" class="f-l iconfont i-l"> &#xe61a; </i>
-                          <span data-type="zhengfu" class="f-l"> 街区链与政府 </span>
+                          <span data-type="zhengfu" class="f-l"> {{ $t("areas.zhengfu") }} </span>
                           <i data-type="zhengfu" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
                     </h3>
 		          	<ul class="f-l"  v-if="currentTab === 'zhengfu'">
@@ -137,10 +137,10 @@
 		          		  </div>
 		          		</li>
 		          	</ul>    
-		          	<h2 class="f-l c-navy"> 区块链与新一代信息技术结合方式研究 </h2>      	
+		          	<h2 class="f-l c-navy"> {{ $t("areas.xueshujiehe") }} </h2>      	
 		          	<h3 class="f-l c-gray" data-type="wulianwang" @click="navTabClick($event)" :class="currentTab === 'wulianwang' ? 'on' : ''">
                           <i data-type="wulianwang" class="f-l iconfont i-l"> &#xe670; </i>
-                          <span data-type="wulianwang" class="f-l"> 区块链与物联网 </span>
+                          <span data-type="wulianwang" class="f-l"> {{ $t("areas.wulianwang") }} </span>
                           <i data-type="wulianwang" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
                     </h3>
 		          	<ul class="f-l"  v-if="currentTab === 'wulianwang'">
@@ -157,7 +157,7 @@
 		          	</ul>
 		          	<h3 class="f-l c-gray" data-type="yunjisuan" @click="navTabClick($event)" :class="currentTab === 'yunjisuan' ? 'on' : ''">
                           <i data-type="yunjisuan" class="f-l iconfont i-l"> &#xee21; </i>
-                          <span data-type="yunjisuan" class="f-l"> 区块链与云计算 </span>
+                          <span data-type="yunjisuan" class="f-l"> {{ $t("areas.yunjisuan") }} </span>
                           <i data-type="yunjisuan" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
                     </h3>
 		          	<ul class="f-l"  v-if="currentTab === 'yunjisuan'">
@@ -174,7 +174,7 @@
 		          	</ul>       
 		          	<h3 class="f-l c-gray" data-type="dashuju" @click="navTabClick($event)" :class="currentTab === 'dashuju' ? 'on' : ''">
                           <i data-type="dashuju" class="f-l iconfont i-l"> &#xe74e; </i>
-                          <span data-type="dashuju" class="f-l"> 区块链接与大数据 </span>
+                          <span data-type="dashuju" class="f-l"> {{ $t("areas.dashuju") }} </span>
                           <i data-type="dashuju" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
                     </h3>
 		          	<ul class="f-l"  v-if="currentTab === 'dashuju'">

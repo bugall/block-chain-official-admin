@@ -3,11 +3,12 @@ import VueI18n from 'vue-i18n';
 import {set_item, get_item} from '@/services/CommonService';
 
 import zh from './zh';
+import en from './en';
 
 Vue.use(VueI18n);
 
 const messages = {
-    en: zh,
+    en: en,
     zh: zh
 };
 

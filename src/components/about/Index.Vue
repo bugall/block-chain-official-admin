@@ -1,24 +1,24 @@
 <template>
     <main><!--main Start --> 
-			<section class="section-group lis-10 salon-ad">
+			<section class="section-group lis-10 about-ad">
 				<div class="container">
-                    <h2 class="f-l c-white" data-aos="zoom-in" data-aos-delay="200"> 关于我们 </h2>
-                    <h3 class="f-l c-white" data-aos="zoom-in" data-aos-delay="300"> 我们愿意坦诚介绍自己 </h3>
+                    <h2 class="f-l c-white" data-aos="zoom-in" data-aos-delay="200"> {{ $t("about.banner.first") }} </h2>
+                    <h3 class="f-l c-white" data-aos="zoom-in" data-aos-delay="300"> {{ $t("about.banner.second") }} </h3>
 				</div>
 			</section>
 			
 			<section class="section-group listab-box">
 				<div class="container">
           <div class="c-box tab-box slide-tab">
-          	<div class="f-l hd bgc-white zh-tabhd-1">
+          	<div class="f-l hd bgc-white" :class="this._i18n.locale === 'en' ? 'en-tabhd-6' : 'zh-tabhd-6'">
           		<ul class="f-l">
-          			<li @click="navTabClick" :class="{on: this.currentTab === 'zuzhijiagou'}" data-type="zuzhijiagou" class="f-l c-gray3"> 组织架构 <em class="f-l em tran-sition transform-scale"></em></li>
-          			<li @click="navTabClick" :class="{on: this.currentTab === 'yanjiuyuan'}" data-type="yanjiuyuan" class="f-l c-gray3"> 研究院介绍 <em class="f-l em tran-sition transform-scale"></em></li>
-          			<li @click="navTabClick" :class="{on: this.currentTab === 'huiyuanzhangcheng'}" data-type="huiyuanzhangcheng" class="f-l c-gray3"> 会员章程 <em class="f-l em tran-sition transform-scale"></em></li>
-          			<li @click="navTabClick" :class="{on: this.currentTab === 'huiyuanshenqing'}" data-type="huiyuanshenqing" class="f-l c-gray3"> 会员申请 <em class="f-l em tran-sition transform-scale"></em></li>
+          			<li @click="navTabClick" :class="{on: this.currentTab === 'zuzhijiagou'}" data-type="zuzhijiagou" class="f-l c-gray3"> {{ $t("about.jiagou") }} <em class="f-l em tran-sition transform-scale"></em></li>
+          			<li @click="navTabClick" :class="{on: this.currentTab === 'yanjiuyuan'}" data-type="yanjiuyuan" class="f-l c-gray3"> {{ $t("about.yanjiuyuan") }} <em class="f-l em tran-sition transform-scale"></em></li>
+          			<li @click="navTabClick" :class="{on: this.currentTab === 'huiyuanzhangcheng'}" data-type="huiyuanzhangcheng" class="f-l c-gray3"> {{ $t("about.zhangcheng") }} <em class="f-l em tran-sition transform-scale"></em></li>
+          			<li @click="navTabClick" :class="{on: this.currentTab === 'huiyuanshenqing'}" data-type="huiyuanshenqing" class="f-l c-gray3"> {{ $t("about.shenqing") }} <em class="f-l em tran-sition transform-scale"></em></li>
           		</ul>
           	</div>
-          	<div class="f-l bd">
+          	<div class="f-l bd"  style="min-height: 1000px">
                   <v-zuzhijiagou v-if="this.currentTab === 'zuzhijiagou'"></v-zuzhijiagou>
                   <v-yanjiuyuan v-else-if="this.currentTab === 'yanjiuyuan'"></v-yanjiuyuan>
                   <v-huiyuanzhangcheng v-else-if="this.currentTab === 'huiyuanzhangcheng'"></v-huiyuanzhangcheng>

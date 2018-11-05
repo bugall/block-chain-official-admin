@@ -5,8 +5,8 @@
             <li class="f-l" v-for="article in articleList" :key="article.id">
             	<img src="static/images/pic/t4-1.png" class="" />
             	<h2 class="f-l c-navy"> {{ article.title }} </h2>
-            	<a :href="article.resource_url" target="_blank" :download="article.resource_url" class="f-l c-gray2 c-green-h"> 资料下载   </a>
-              <time class="f-l c-gray"> 上传时间： {{ article.btime }} </time>
+            	<a :href="article.resource_url" target="_blank" :download="article.resource_url" class="f-l c-gray2 c-green-h"> {{ $t("common.downloadResource") }}   </a>
+              <time class="f-l c-gray"> {{ $t("common.uploadTime") }}： {{ article.btime }} </time>
             </li>
         </div>
         

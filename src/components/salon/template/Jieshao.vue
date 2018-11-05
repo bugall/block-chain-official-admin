@@ -3,8 +3,8 @@
     <ul class="f-l listab-2"><!-- Salon content  -->
         <div class="f-l lis-subteb">
           <ul class="c-box">
-          	<li @click="tabClick" data-type="jieshao" class="f-l tab-item c-gray3" :class="tab === 'jieshao' ? 'active' : ''"> 沙龙介绍  </li>
-          	<li @click="tabClick" data-type="zhangcheng" class="f-l tab-item c-gray3" :class="tab === 'zhangcheng' ? 'active' : ''" > 沙龙章程 </li>
+          	<li @click="tabClick" data-type="jieshao" class="f-l tab-item c-gray3" :class="tab === 'jieshao' ? 'active' : ''"> {{ $t("salon.shaolongjieshao") }}  </li>
+          	<li @click="tabClick" data-type="zhangcheng" class="f-l tab-item c-gray3" :class="tab === 'zhangcheng' ? 'active' : ''" > {{ $t("salon.zhangcheng") }} </li>
           </ul>
           <div class="f-l products">
           	<div v-if="this.tab==='jieshao'" class="f-l div-item selected listab-2a"><!-- Introduction of salon  -->

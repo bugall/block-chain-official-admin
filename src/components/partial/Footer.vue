@@ -1,17 +1,19 @@
 <template>
-    <el-row class="footer-wrap">
-        <section class="footer">
-            <div class="footer-outer">
-                <div class="footer-inner">
-                    <div class="text-center">
-                        @2017 - 2018 Powered by IDAChain &nbsp;<a target='_blank' nofollow
-                                                      href="https://github.com/IDAChain/idac-explorer"><span
-                            class="fa fa-lg fa-github"></span></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </el-row>
+<footer>
+      <div class="f-l footer-t">
+        <div class="container">
+          <a href="#" class="c-gray2 c-green-h"><i class="iconfont">  </i></a>
+          <a href="#" class="c-gray2 c-green-h"><i class="iconfont">  </i></a>
+          <a href="#" class="c-gray2 c-green-h"><i class="iconfont">  </i></a>
+          <a href="#" class="c-gray2 c-green-h"><i class="iconfont">  </i></a>
+        </div>
+      </div>
+      <div class="f-l footer-b">
+        <div class="container">
+          <address class="c-gray2"> Copyright © Copyright 2018 <a href="#" class="c-green"> Zhongke Hive Blockchain Research Institute </a> - All Rights Reserved </address>
+        </div>
+      </div>
+    </footer>
 </template>
 
 <script>

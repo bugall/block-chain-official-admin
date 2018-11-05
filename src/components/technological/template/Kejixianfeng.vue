@@ -4,7 +4,7 @@
 		<div class="f-l div-c showMoreNChildren">
 		    <li class="f-l" v-for="article in articleList" :key="article.id">
 		    	<div class="l-box">
-		    	  <a href="#" class="f-l pic">
+		    	  <a :href="`/#/technological/detail/${article.id}?type=kejiqianyan,xianfeng`" class="f-l pic">
 		    		  <img :src="article.banner" class="f-l img tran-sition" />
 		    	  </a>
 		    	</div>

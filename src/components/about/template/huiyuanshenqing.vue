@@ -15,14 +15,14 @@
                 		</div>
                 	</div>  	
                 	<div class="l-box">
-                		<h2 class="f-l c-navy"> 群成员应用   </h2>
-                		<h3 class="f-l c-navy"> 会员享有下列权利：  </h3>
+                		<h2 class="f-l c-navy"> {{ $t("about.qunchengyuan") }}   </h2>
+                		<h3 class="f-l c-navy"> {{ $t("about.qunquanli") }}  </h3>
                         
                         <div class="ql-container"> 
                 		    <div class="ql-editor" v-html="group.content">
                             </div>	
                         </div>
-                		<a :href="group.resource_url" target="_blank" :download="group.resource_url" class="btn-2 bgc-green c-white bgc-blue1-h btn-download"> 申请表下载  </a>
+                		<a :href="group.resource_url" target="_blank" :download="group.resource_url" class="btn-2 bgc-green c-white bgc-blue1-h btn-download"> {{ $t("about.shenqingxiazai") }} </a>
                 	</div>
                 	<div class="r-box animat-r">
                 		<div class="animation-box">
@@ -53,13 +53,13 @@
                 		</div>
                 	</div>                	
                 	<div class="r-box">
-                		<h2 class="f-l c-navy"> 个人会员申请表   </h2>
-                		<h3 class="f-l c-navy"> 会员享有下列权利：   </h3>
+                		<h2 class="f-l c-navy"> {{ $t("about.gerenshenqing") }}   </h2>
+                		<h3 class="f-l c-navy"> {{ $t("about.gerenquanli") }}   </h3>
                 		<div class="ql-container"> 
                 		    <div class="ql-editor" v-html="person.content">
                             </div>	
                         </div>
-                		<a :href="person.resource_url"  target="_blank" :download="person.resource_url" class="btn-2 bgc-green c-white bgc-blue1-h btn-download"> 申请表下载  </a>
+                		<a :href="person.resource_url"  target="_blank" :download="person.resource_url" class="btn-2 bgc-green c-white bgc-blue1-h btn-download"> {{ $t("about.shenqingxiazai") }}  </a>
                 	</div>    	
                 </div>	         
           		</ul>          		

@@ -2,7 +2,7 @@
     <div id="app">
         <v-header></v-header>
         <router-view></router-view>
-        <!-- <v-footer></v-footer> -->
+        <v-footer></v-footer>
     </div>
 </template>
 
@@ -63,7 +63,7 @@
         max-width: 1280px;
         margin-top: 80px;
     }
-
+    
     .router-link-active {
         border-color: #3c4463 !important;
         background: #3c4463 !important;;

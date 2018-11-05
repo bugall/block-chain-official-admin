@@ -8,14 +8,13 @@
 								      <p class="f-l c-gray p-text"> 
                                           {{ talent.description }}
 								      </p>
-								      <a href="#" class="f-l c-green r-more1"> Read More </a>
-								      <div class="f-l em-box">
+								      <div class="f-l em-box" @click="$router.push({ path: `/talent/detail/${talent.id}?type=1`})" style="cursor: pointer">
 								        <em class="f-l em-tl bgc-green tran-sition"></em>
 								        <em class="f-l em-br bgc-green tran-sition"></em>
 								      </div>
 							      </div>
 								    <div class="f-l div-b bgc-white">
-							        <a href="#" class="f-l pic bgc-gray3"><img :src="talent.avatar" class="f-l"/></a>
+							        <a :href="`/#/talent/detail/${talent.id}?type=1`" class="f-l pic bgc-gray3"><img :src="talent.avatar" class="f-l"/></a>
 								      <div class="l-box">
 								        <h2 class="f-l c-navy"> {{ talent.name }}</h2>
 								        <span class="f-l c-gray"> {{ talent.job }}</span>
