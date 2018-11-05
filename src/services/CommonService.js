@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
 // const baseURL = location.host;
-const baseURL = 'localhost:7001';
+const baseURL = '47.244.120.205';
 
 export const getArticleList = (options) => {
     options.language = get_item('language') === 'zh' ? '1' : '0';
