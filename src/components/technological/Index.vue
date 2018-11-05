@@ -2,7 +2,7 @@
     <main><!--main Start --> 
 	    <section class="section-group lis-10 talent-ad">
 		    <div class="container">
-                <h2 class="f-l c-white" data-aos="zoom-in" data-aos-delay="200"> 区块链人才库  </h2>
+                <h2 class="f-l c-white" data-aos="zoom-in" data-aos-delay="200"> 区块链科技前沿 </h2>
                 <h3 class="f-l c-white" data-aos="zoom-in" data-aos-delay="300"> 推动世界链，融合精英智慧  </h3>
 		    </div>
 			</section>

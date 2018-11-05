@@ -1,23 +1,43 @@
 <template>
 <ul class="f-l listab-10"><!-- Organizational Structure  -->
-                <div class="c-box">
-                  <img src="static/images/pic/zht10-1.png" class="img" />
-                </div>
+<div class="ql-container"> 
+                		    <div class="ql-editor" v-html="article.content">
+                            </div>	
+                        </div>
           		</ul>
 </template>
 
 <script>
+    import { getArticleList } from '@/services/CommonService';
     export default {
         data () {
             return {
-                loading: true
+                category: ['about', 'jiagou'],
+                loading: true,
+                article: {}
             };
         },
         mounted () {
+            this._getArticleList();
         },
 
         watch: { },
         methods: {
+            _getArticleList () {
+                getArticleList({
+                    status: 1,
+                    category: this.category.join(',')
+                }).then(res => {
+                    this.article = res.body.data.list[0];
+                });
+            },
+            handleSizeChange (val) {
+                this.perPage = val;
+            },
+            handleCurrentChange (val) {
+                this.page = val;
+                this._getArticleList();
+            }
         },
         components: { }
     };

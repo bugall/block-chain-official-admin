@@ -18,183 +18,173 @@
 				    <div class="c-box lis-11">
 	            <div class="c-box slide-menu">
 		            <h2 class="f-l c-navy"> 区块链应用场景研究 </h2>
-		          	<h3 class="f-l c-gray"><i class="f-l iconfont i-l"> &#xe89d; </i><span class="f-l"> 街区链与金融  </span><i class="iconfont f-r i-r tran-sition"> &#xe629; </i></h3>
-		          	<ul class="f-l">
+		          	<h3 class="f-l c-gray" data-type="jinrong" @click="navTabClick" :class="currentTab === 'jinrong' ? 'on' : ''">
+                          <i data-type="jinrong" class="f-l iconfont i-l"> &#xe89d; </i>
+                          <span data-type="jinrong"  class="f-l"> 街区链与金融  </span>
+                          <i data-type="jinrong"  class="iconfont f-r i-r tran-sition"> &#xe629; </i>
+                    </h3>
+		          	<ul class="f-l" v-if="currentTab === 'jinrong'">
 		          		<li class="f-l bgc-gray2">
 		          		  <div class="c-box">
 			          		  <p class="f-l p-text c-gray3">
-												金融是块链技术的第一个应用领域。
-												<br/>   
-												与互联网技术相比，块链技术的出现更有可能给金融领域带来根本性的变化。
-												<br/>         
-												块状链在金融业的应用场景非常丰富，
-												<br/>      
-												它可以减少支付结算和票据领域的交易中介环节，实现证券权利与交易信息的防篡改、防篡改，保证交易信息的一致性。
-												<br/>      
-												在供应链金融和贸易融资的每个节点过程；帮助反洗钱（AML）和了解客户（KY）。C)实现跨机构信息共享和交易信息跟踪；作为监管技术手段，进行事前和事中监测和预警。 
+                                    <div class="ql-container"> 
+                		                <div class="ql-editor" v-html="this.article.content">
+                                        </div>	
+                                    </div>
 			          		  </p>
 		          		  </div>
 		          		</li>
 		          	</ul>
-		          	<h3 class="f-l c-gray"><i class="f-l iconfont i-l"> &#xe636; </i><span class="f-l"> 区块链与普惠金融  </span><i class="iconfont f-r i-r tran-sition"> &#xe629; </i></h3>
-		          	<ul class="f-l">
+		          	<h3 class="f-l c-gray" data-type="puhuijinrong" @click="navTabClick"  :class="currentTab === 'puhuijinrong' ? 'on' : ''">
+                          <i data-type="puhuijinrong" class="f-l iconfont i-l"> &#xe636; </i>
+                          <span data-type="puhuijinrong" class="f-l"> 区块链与普惠金融  </span>
+                          <i data-type="puhuijinrong" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
+                    </h3>
+		          	<ul class="f-l" v-if="currentTab === 'puhuijinrong'">
 		          		<li class="f-l bgc-gray2">
 		          		  <div class="c-box">
 			          		  <p class="f-l p-text c-gray3">
-												金融是块链技术的第一个应用领域。
-												<br/>   
-												与互联网技术相比，块链技术的出现更有可能给金融领域带来根本性的变化。
-												<br/>         
-												块状链在金融业的应用场景非常丰富，
-												<br/>      
-												它可以减少支付结算和票据领域的交易中介环节，实现证券权利与交易信息的防篡改、防篡改，保证交易信息的一致性。
-												<br/>      
-												在供应链金融和贸易融资的每个节点过程；帮助反洗钱（AML）和了解客户（KY）。C)实现跨机构信息共享和交易信息跟踪；作为监管技术手段，进行事前和事中监测和预警。 
+								<div class="ql-container"> 
+                		                <div class="ql-editor" v-html="this.article.content">
+                                        </div>	
+                                    </div>
 			          		  </p>
 		          		  </div>
 		          		</li>
 		          	</ul>       
-		          	<h3 class="f-l c-gray"><i class="f-l iconfont i-l"> &#xe61b; </i><span class="f-l"> 街区链与农业资源数字化  </span><i class="iconfont f-r i-r tran-sition"> &#xe629; </i></h3>
-		          	<ul class="f-l">
+		          	<h3 class="f-l c-gray" data-type="nongye" @click="navTabClick($event)" :class="currentTab === 'nongye' ? 'on' : ''">
+                          <i data-type="nongye" class="f-l iconfont i-l"> &#xe61b; </i>
+                          <span data-type="nongye" class="f-l"> 街区链与农业资源数字化  </span>
+                          <i data-type="nongye" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
+                    </h3>
+		          	<ul class="f-l"  v-if="currentTab === 'nongye'">
 		          		<li class="f-l bgc-gray2">
 		          		  <div class="c-box">
 			          		  <p class="f-l p-text c-gray3">
-												金融是块链技术的第一个应用领域。
-												<br/>   
-												与互联网技术相比，块链技术的出现更有可能给金融领域带来根本性的变化。
-												<br/>         
-												块状链在金融业的应用场景非常丰富，
-												<br/>      
-												它可以减少支付结算和票据领域的交易中介环节，实现证券权利与交易信息的防篡改、防篡改，保证交易信息的一致性。
-												<br/>      
-												在供应链金融和贸易融资的每个节点过程；帮助反洗钱（AML）和了解客户（KY）。C)实现跨机构信息共享和交易信息跟踪；作为监管技术手段，进行事前和事中监测和预警。 
+											<div class="ql-container"> 
+                		                <div class="ql-editor" v-html="this.article.content">
+                                        </div>	
+                                    </div>
 			          		  </p>
 		          		  </div>
 		          		</li>
 		          	</ul>     
-		          	<h3 class="f-l c-gray"><i class="f-l iconfont i-l"> &#xe615; </i><span class="f-l"> 街区链与教育  </span><i class="iconfont f-r i-r tran-sition"> &#xe629; </i></h3>
-		          	<ul class="f-l">
+		          	<h3 class="f-l c-gray" data-type="jiaoyu" @click="navTabClick" :class="currentTab === 'jiaoyu' ? 'on' : ''" >
+                          <i data-type="jiaoyu" class="f-l iconfont i-l"> &#xe615; </i>
+                          <span data-type="jiaoyu" class="f-l"> 街区链与教育  </span>
+                          <i data-type="jiaoyu" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
+                    </h3>
+		          	<ul class="f-l" v-if="currentTab === 'jiaoyu'">
 		          		<li class="f-l bgc-gray2">
 		          		  <div class="c-box">
 			          		  <p class="f-l p-text c-gray3">
-												金融是块链技术的第一个应用领域。
-												<br/>   
-												与互联网技术相比，块链技术的出现更有可能给金融领域带来根本性的变化。
-												<br/>         
-												块状链在金融业的应用场景非常丰富，
-												<br/>      
-												它可以减少支付结算和票据领域的交易中介环节，实现证券权利与交易信息的防篡改、防篡改，保证交易信息的一致性。
-												<br/>      
-												在供应链金融和贸易融资的每个节点过程；帮助反洗钱（AML）和了解客户（KY）。C)实现跨机构信息共享和交易信息跟踪；作为监管技术手段，进行事前和事中监测和预警。 
+												<div class="ql-container"> 
+                		                <div class="ql-editor" v-html="this.article.content">
+                                        </div>	
+                                    </div> 
 			          		  </p>
 		          		  </div>
 		          		</li>
 		          	</ul>  
-		          	<h3 class="f-l c-gray"><i class="f-l iconfont i-l"> &#xe67e; </i><span class="f-l"> 区块链与健康  </span><i class="iconfont f-r i-r tran-sition"> &#xe629; </i></h3>
-		          	<ul class="f-l">
+		          	<h3 class="f-l c-gray" data-type="jiankang" @click="navTabClick($event)"  :class="currentTab === 'jiankang' ? 'on' : ''">
+                          <i data-type="jiankang" class="f-l iconfont i-l"> &#xe67e; </i>
+                          <span data-type="jiankang" class="f-l"> 区块链与健康  </span>
+                          <i data-type="jiankang" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
+                    </h3>
+		          	<ul class="f-l"  v-if="currentTab === 'jiankang'">
 		          		<li class="f-l bgc-gray2">
 		          		  <div class="c-box">
 			          		  <p class="f-l p-text c-gray3">
-												金融是块链技术的第一个应用领域。
-												<br/>   
-												与互联网技术相比，块链技术的出现更有可能给金融领域带来根本性的变化。
-												<br/>         
-												块状链在金融业的应用场景非常丰富，
-												<br/>      
-												它可以减少支付结算和票据领域的交易中介环节，实现证券权利与交易信息的防篡改、防篡改，保证交易信息的一致性。
-												<br/>      
-												在供应链金融和贸易融资的每个节点过程；帮助反洗钱（AML）和了解客户（KY）。C)实现跨机构信息共享和交易信息跟踪；作为监管技术手段，进行事前和事中监测和预警。 
+										<div class="ql-container"> 
+                		                <div class="ql-editor" v-html="this.article.content">
+                                        </div>	
+                                    </div> 
 			          		  </p>
 		          		  </div>
 		          		</li>
 		          	</ul>  
-		          	<h3 class="f-l c-gray"><i class="f-l iconfont i-l"> &#xe60b; </i><span class="f-l"> 街区链与知识产权保护  </span><i class="iconfont f-r i-r tran-sition"> &#xe629; </i></h3>
-		          	<ul class="f-l">
+		          	<h3 class="f-l c-gray" data-type="chanquan" @click="navTabClick($event)" :class="currentTab === 'chanquan' ? 'on' : ''">
+                          <i data-type="chanquan" class="f-l iconfont i-l"> &#xe60b; </i>
+                          <span data-type="chanquan" class="f-l"> 街区链与知识产权保护  </span>
+                          <i data-type="chanquan" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
+                    </h3>
+		          	<ul class="f-l"  v-if="currentTab === 'chanquan'">
 		          		<li class="f-l bgc-gray2">
 		          		  <div class="c-box">
 			          		  <p class="f-l p-text c-gray3">
-												金融是块链技术的第一个应用领域。
-												<br/>   
-												与互联网技术相比，块链技术的出现更有可能给金融领域带来根本性的变化。
-												<br/>         
-												块状链在金融业的应用场景非常丰富，
-												<br/>      
-												它可以减少支付结算和票据领域的交易中介环节，实现证券权利与交易信息的防篡改、防篡改，保证交易信息的一致性。
-												<br/>      
-												在供应链金融和贸易融资的每个节点过程；帮助反洗钱（AML）和了解客户（KY）。C)实现跨机构信息共享和交易信息跟踪；作为监管技术手段，进行事前和事中监测和预警。 
+											<div class="ql-container"> 
+                		                <div class="ql-editor" v-html="this.article.content">
+                                        </div>	
+                                    </div> 
 			          		  </p>
 		          		  </div>
 		          		</li>
 		          	</ul>  
-		          	<h3 class="f-l c-gray"><i class="f-l iconfont i-l"> &#xe61a; </i><span class="f-l"> 街区链与政府 </span><i class="iconfont f-r i-r tran-sition"> &#xe629; </i></h3>
-		          	<ul class="f-l">
+		          	<h3 class="f-l c-gray" data-type="zhengfu" @click="navTabClick($event)"  :class="currentTab === 'zhengfu' ? 'on' : ''">
+                          <i data-type="zhengfu" class="f-l iconfont i-l"> &#xe61a; </i>
+                          <span data-type="zhengfu" class="f-l"> 街区链与政府 </span>
+                          <i data-type="zhengfu" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
+                    </h3>
+		          	<ul class="f-l"  v-if="currentTab === 'zhengfu'">
 		          		<li class="f-l bgc-gray2">
 		          		  <div class="c-box">
 			          		  <p class="f-l p-text c-gray3">
-												金融是块链技术的第一个应用领域。
-												<br/>   
-												与互联网技术相比，块链技术的出现更有可能给金融领域带来根本性的变化。
-												<br/>         
-												块状链在金融业的应用场景非常丰富，
-												<br/>      
-												它可以减少支付结算和票据领域的交易中介环节，实现证券权利与交易信息的防篡改、防篡改，保证交易信息的一致性。
-												<br/>      
-												在供应链金融和贸易融资的每个节点过程；帮助反洗钱（AML）和了解客户（KY）。C)实现跨机构信息共享和交易信息跟踪；作为监管技术手段，进行事前和事中监测和预警。 
+													<div class="ql-container"> 
+                		                <div class="ql-editor" v-html="this.article.content">
+                                        </div>	
+                                    </div> 
 			          		  </p>
 		          		  </div>
 		          		</li>
 		          	</ul>    
 		          	<h2 class="f-l c-navy"> 区块链与新一代信息技术结合方式研究 </h2>      	
-		          	<h3 class="f-l c-gray"><i class="f-l iconfont i-l"> &#xe670; </i><span class="f-l"> 区块链与物联网 </span><i class="iconfont f-r i-r tran-sition"> &#xe629; </i></h3>
-		          	<ul class="f-l">
+		          	<h3 class="f-l c-gray" data-type="wulianwang" @click="navTabClick($event)" :class="currentTab === 'wulianwang' ? 'on' : ''">
+                          <i data-type="wulianwang" class="f-l iconfont i-l"> &#xe670; </i>
+                          <span data-type="wulianwang" class="f-l"> 区块链与物联网 </span>
+                          <i data-type="wulianwang" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
+                    </h3>
+		          	<ul class="f-l"  v-if="currentTab === 'wulianwang'">
 		          		<li class="f-l bgc-gray2">
 		          		  <div class="c-box">
 			          		  <p class="f-l p-text c-gray3">
-												金融是块链技术的第一个应用领域。
-												<br/>   
-												与互联网技术相比，块链技术的出现更有可能给金融领域带来根本性的变化。
-												<br/>         
-												块状链在金融业的应用场景非常丰富，
-												<br/>      
-												它可以减少支付结算和票据领域的交易中介环节，实现证券权利与交易信息的防篡改、防篡改，保证交易信息的一致性。
-												<br/>      
-												在供应链金融和贸易融资的每个节点过程；帮助反洗钱（AML）和了解客户（KY）。C)实现跨机构信息共享和交易信息跟踪；作为监管技术手段，进行事前和事中监测和预警。 
+									<div class="ql-container"> 
+                		                <div class="ql-editor" v-html="this.article.content">
+                                        </div>	
+                                    </div> 
 			          		  </p>
 		          		  </div>
 		          		</li>
 		          	</ul>
-		          	<h3 class="f-l c-gray"><i class="f-l iconfont i-l"> &#xee21; </i><span class="f-l"> 区块链与云计算 </span><i class="iconfont f-r i-r tran-sition"> &#xe629; </i></h3>
-		          	<ul class="f-l">
+		          	<h3 class="f-l c-gray" data-type="yunjisuan" @click="navTabClick($event)" :class="currentTab === 'yunjisuan' ? 'on' : ''">
+                          <i data-type="yunjisuan" class="f-l iconfont i-l"> &#xee21; </i>
+                          <span data-type="yunjisuan" class="f-l"> 区块链与云计算 </span>
+                          <i data-type="yunjisuan" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
+                    </h3>
+		          	<ul class="f-l"  v-if="currentTab === 'yunjisuan'">
 		          		<li class="f-l bgc-gray2">
 		          		  <div class="c-box">
 			          		  <p class="f-l p-text c-gray3">
-												金融是块链技术的第一个应用领域。
-												<br/>   
-												与互联网技术相比，块链技术的出现更有可能给金融领域带来根本性的变化。
-												<br/>         
-												块状链在金融业的应用场景非常丰富，
-												<br/>      
-												它可以减少支付结算和票据领域的交易中介环节，实现证券权利与交易信息的防篡改、防篡改，保证交易信息的一致性。
-												<br/>      
-												在供应链金融和贸易融资的每个节点过程；帮助反洗钱（AML）和了解客户（KY）。C)实现跨机构信息共享和交易信息跟踪；作为监管技术手段，进行事前和事中监测和预警。 
+											<div class="ql-container"> 
+                		                <div class="ql-editor" v-html="this.article.content">
+                                        </div>	
+                                    </div> 
 			          		  </p>
 		          		  </div>
 		          		</li>
 		          	</ul>       
-		          	<h3 class="f-l c-gray"><i class="f-l iconfont i-l"> &#xe74e; </i><span class="f-l"> 区块链接与大数据 </span><i class="iconfont f-r i-r tran-sition"> &#xe629; </i></h3>
-		          	<ul class="f-l">
+		          	<h3 class="f-l c-gray" data-type="dashuju" @click="navTabClick($event)" :class="currentTab === 'dashuju' ? 'on' : ''">
+                          <i data-type="dashuju" class="f-l iconfont i-l"> &#xe74e; </i>
+                          <span data-type="dashuju" class="f-l"> 区块链接与大数据 </span>
+                          <i data-type="dashuju" class="iconfont f-r i-r tran-sition"> &#xe629; </i>
+                    </h3>
+		          	<ul class="f-l"  v-if="currentTab === 'dashuju'">
 		          		<li class="f-l bgc-gray2">
 		          		  <div class="c-box">
 			          		  <p class="f-l p-text c-gray3">
-												金融是块链技术的第一个应用领域。
-												<br/>   
-												与互联网技术相比，块链技术的出现更有可能给金融领域带来根本性的变化。
-												<br/>         
-												块状链在金融业的应用场景非常丰富，
-												<br/>      
-												它可以减少支付结算和票据领域的交易中介环节，实现证券权利与交易信息的防篡改、防篡改，保证交易信息的一致性。
-												<br/>      
-												在供应链金融和贸易融资的每个节点过程；帮助反洗钱（AML）和了解客户（KY）。C)实现跨机构信息共享和交易信息跟踪；作为监管技术手段，进行事前和事中监测和预警。 
+                                	<div class="ql-container"> 
+                		                <div class="ql-editor" v-html="this.article.content">
+                                        </div>	
+                                    </div> 
 			          		  </p>
 		          		  </div>
 		          		</li>
@@ -209,11 +199,13 @@
           		
 
 <script>
+    import { getArticleList } from '@/services/CommonService';
     export default {
         data () {
             return {
                 search: '',
-                currentTab: 'jishuchuangxin'
+                currentTab: 'jinrong',
+                article: {}
             };
         },
         created () {
@@ -222,11 +214,24 @@
             window.AOS.init();
         },
         methods: {
+            _getArticleList () {
+                getArticleList({
+                    status: 1,
+                    category: `quyuyanjiu,${this.currentTab}`
+                }).then(res => {
+                    this.article = res.body.data.list[0] || {};
+                });
+            },
             clearInput () {
                 this.setKeywords({keywords: ''});
             },
             navTabClick (element) {
+                if (element.target.getAttribute('data-type') === this.currentTab) {
+                    return;
+                }
+                this.article = {};
                 this.currentTab = element.target.getAttribute('data-type');
+                this._getArticleList();
             }
         },
         components: {
@@ -257,6 +262,9 @@
     }
     .el-menu-item {
         text-align: center;
+    }
+    .slide-menu h3 {
+        cursor: pointer;
     }
     
 

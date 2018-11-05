@@ -2,6 +2,16 @@ import Vue from 'vue';
 
 // const baseURL = location.host;
 const baseURL = 'localhost:7001';
+export const getArticleList = (options) => {
+    return Vue.http.get(`//${baseURL}/api/v1/article/list`, { params: options }, {
+        responseType: 'json'
+    });
+};
+export const getTalentList = (options) => {
+    return Vue.http.get(`//${baseURL}/api/v1/talent/list`, { params: options }, {
+        responseType: 'json'
+    });
+};
 
 export const get_user_info = (options) => {
     const token = localStorage.getItem('token');

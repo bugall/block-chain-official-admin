@@ -8,6 +8,9 @@ import locales from '@/locales';
 import VueTimeago from 'vue-timeago';
 import Loading from './components/partial/Loading.vue';
 import Element from 'element-ui';
+import 'quill/dist/quill.core.css';
+import 'quill/dist/quill.snow.css';
+import 'quill/dist/quill.bubble.css';
 
 Vue.use(VueTimeago, {
     name: 'timeago',
