@@ -40,7 +40,7 @@ const locale = {
         jieshao: '沙龙介绍',
         zhangcheng: '沙龙章程',
         banner: {
-            first: '链映沙龙',
+            first: '链英沙龙',
             second: '精英交互的块链交互平台'
         },
         huodong: '沙龙活动',
