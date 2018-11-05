@@ -31,10 +31,10 @@
 </template>
 
 <script>
-    import huiyuanshenqing from './template/Huiyuanshenqing.vue';
-    import huiyuanzhanghcheng from './template/Huiyuanzhangcheng.vue';
-    import yanjiuyuan from './template/Yanjiuyuan.vue';
-    import zuzhijiagou from './template/Zuzhijiagou.vue';
+    import huiyuanshenqing from './template/huiyuanshenqing.vue';
+    import huiyuanzhanghcheng from './template/huiyuanzhangcheng.vue';
+    import yanjiuyuan from './template/yanjiuyuan.vue';
+    import zuzhijiagou from './template/zuzhijiagou.vue';
 
     export default {
         data () {
