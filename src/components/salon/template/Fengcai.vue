@@ -71,7 +71,9 @@
                 getArticleList({
                     status: 1,
                     category: this.category.join(',') + `,${this.tab}`,
-                    articleList: []
+                    articleList: [],
+                    page_size: this.perPage,
+                    page: this.page
                 }).then(res => {
                     this.articleList = res.body.data.list;
                     this.totalItems = res.body.data.total;

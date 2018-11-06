@@ -26,7 +26,7 @@
 				<div class="container">
           <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe9f8; </i> {{ $t("header.salon") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.backWatch") }} </a>
+						<a href="/#/salon" class="r-more c-white tran-sition"> {{ $t("common.backWatch") }} </a>
 					</div>        
           <h3 class="f-l c-gray">
           	{{ $t("index.salonDetail") }}
@@ -56,40 +56,20 @@
 				<div class="container">
           <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe6bc; </i> {{ $t("index.fengcai") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
+						<a href="/#/salon" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
 					</div> 
 					<div class="c-box">
 						<ul class="f-l">
-							<li class="f-l" data-aos="zoom-in" data-aos-delay="200">
-								<a href="#" class="f-l pic">
-									<img src="static/images/pic/a3-1.png" class="f-l tran-sition" />
+							<li class="f-l" data-aos="zoom-in" data-aos-delay="200" v-for="article in salonFengcai" :key="article.key">
+								<a :href="`/#/salon/detail/${article.id}?type=salon,fengcai,wenzhang`" class="f-l pic">
+									<img :src="article.banner" class="f-l tran-sition" />
 								</a>
 								<div class="f-l lis-3c"> 
-								  <h2 class="f-l c-navy"> 聚焦区块链落地应用 首届链英沙龙在北京成功举办 </h2>
+								  <h2 class="f-l c-navy"> {{ article.title }} </h2>
 								  <em class="f-l em tran-sition"></em>
-								  <time class="f-l c-gray bgc-blue4"> 2017-11-16 09:00 ~ 2018-11-16 17:00  </time>
+								  <time class="f-l c-gray bgc-blue4"> {{ article.btime }} ~ {{ article.etime }}  </time>
 								</div>
 							</li>
-							<li class="f-l" data-aos="zoom-in" data-aos-delay="600">
-								<a href="#" class="f-l pic">
-									<img src="static/images/pic/a3-2.png" class="f-l tran-sition" />
-								</a>
-								<div class="f-l lis-3c"> 
-								  <h2 class="f-l c-navy"> 中国区块链应用与金融科技大会 </h2>
-								  <em class="f-l em tran-sition"></em>
-								  <time class="f-l c-gray bgc-blue4"> 2017-11-16 09:00 ~ 2018-11-16 17:00  </time>
-								</div>
-							</li>			
-							<li class="f-l" data-aos="zoom-in" data-aos-delay="800">
-								<a href="#" class="f-l pic">
-									<img src="static/images/pic/a3-3.png" class="f-l tran-sition" />
-								</a>
-								<div class="f-l lis-3c"> 
-								  <h2 class="f-l c-navy"> 科技与未来 </h2>
-								  <em class="f-l em tran-sition"></em>
-								  <time class="f-l c-gray bgc-blue4"> 2017-11-16 09:00 ~ 2018-11-16 17:00  </time>
-								</div>
-							</li>	
 						</ul>
 					</div> 
 				</div>
@@ -99,68 +79,26 @@
 				<div class="container">
           <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe643; </i> {{ $t("index.zixun") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
+						<a href="/#/news" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
 					</div> 
 					<div class="c-box" data-aos="fade-right" data-aos-delay="200">
 						<ul class="f-l">							
-							<li class="f-l">
+							<li class="f-l" v-for="article in newsZixun" :key="article.id">
 								<div class="l-box">
-								  <a href="#" class="f-l pic">
-									  <img src="static/images/pic/a4-1.png" class="f-l img tran-sition" />
+								  <a :href="`/#/news/detail/${article.id}?type=xinwenzhongxin,qukuailian`" class="f-l pic">
+									  <img :src="article.banner" class="f-l img tran-sition" />
 								  </a>
-								  <time class="f-l c-gray"> 2017-07-12  </time>
+								  <time class="f-l c-gray"> {{ article.btime }}  </time>
 								</div>
 								<div class="r-box">
-								  <h2 class="f-l c-navy"> 区块链革新物联网：以四大优势，突破四 </h2>
+								  <h2 class="f-l c-navy"> {{ article.title }} </h2>
 								  <p class="f-l c-gray p-text">
-								  	物联网是一个基于互联网、传统电信网等信息承载体，让所有能够被独立寻址的普通物理对象实现互联互通的网络。简言之，物联网通过网络平台，    
+                                    {{ article.description }}
 								  </p>
-								  <a href="#" class="f-r c-green r-more1"> Read More </a>
+								  <a :href="`/#/news/detail/${article.id}?type=xinwenzhongxin,hangye`" class="f-r c-green r-more1"> Read More </a>
 								</div>
 								<div class="c-box"><em class="f-l em tran-sition"></em></div>
 							</li>
-							<li class="f-l">
-								<div class="l-box">
-								  <a href="#" class="f-l pic"><img src="static/images/pic/a4-2.png" class="f-l img tran-sition" /></a>
-								  <time class="f-l c-gray"> 2017-07-12  </time>
-								</div>
-								<div class="r-box">
-								  <h2 class="f-l c-navy"> 区块链时代，企业管理的颠覆与新生 </h2>
-								  <p class="f-l c-gray p-text">
-								  	起初，区块链技术并没有得到人们的广泛关注，但如今，世界上很多大型银行和科技公司都已逐渐意识到区块链将会是继互联网之后的另一个颠覆性....  
-								  </p>
-								  <a href="#" class="f-r c-green r-more1"> Read More </a>
-								</div>
-								<div class="c-box"><em class="f-l em tran-sition"></em></div>
-							</li>	
-							<li class="f-l">
-								<div class="l-box">
-								  <a href="#" class="f-l pic"><img src="static/images/pic/a4-3.png" class="f-l img tran-sition" /></a>
-								  <time class="f-l c-gray"> 2017-07-12  </time>
-								</div>
-								<div class="r-box">
-								  <h2 class="f-l c-navy"> 区块链，“改良”还是“革命”？  </h2>
-								  <p class="f-l c-gray p-text">
-								  	物联网是一个基于互联网、传统电信网等信息承载体，让所有能够被独立寻址的普通物理对象实现互联互通的网络。简言之，物联网通过网络平台，        
-								  </p>
-								  <a href="#" class="f-r c-green r-more1"> Read More </a>
-								</div>
-								<div class="c-box"><em class="f-l em tran-sition"></em></div>
-							</li>						
-							<li class="f-l">
-								<div class="l-box">
-								  <a href="#" class="f-l pic"><img src="static/images/pic/a4-4.png" class="f-l img tran-sition" /></a>
-								  <time class="f-l c-gray"> 2017-07-12  </time>
-								</div>
-								<div class="r-box">
-								  <h2 class="f-l c-navy"> 数字金融+区块链，让知识产权“流动”...  </h2>
-								  <p class="f-l c-gray p-text">
-								  	自从2004年支付宝上线以来，数字金融便开始进入人们的视野。如今，随着这一领域的不断发展，各类金融机构间的竞争已不仅仅停留在冲量和，....    
-								  </p>
-								  <a href="#" class="f-r c-green r-more1"> Read More </a>
-								</div>
-								<div class="c-box"><em class="f-l em tran-sition"></em></div>
-							</li>		
 						</ul>
 					</div> 
 				</div>
@@ -170,44 +108,22 @@
 				<div class="container">
           <h1 class="f-l c-white"><i class="iconfont lis-icon"> &#xe89d; </i> {{ $t("index.hangyezixun") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
+						<a href="/#/news" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
 					</div> 
 					<div class="c-box" data-aos="fade-left" data-aos-delay="200">
 						<div class="l-box">
 							<ul class="f-l">
-								<li class="f-l">
-									<a href="#" class="f-l">
+								<li class="f-l" v-for="article in newsHangye" :key="article.id">
+									<a :href="`/#/news/detail/${article.id}?type=xinwenzhongxin,hangye`" class="f-l">
 										<em class="f-l em-t bgc-cyan tran-sition"></em>
-										<h2 class="f-l c-white"> 十九大召开后，区块链技术和法定数字货币如何发展？  </h2>
+										<h2 class="f-l c-white"> {{ article.title }} </h2>
 										<p class="f-l p-text c-gray1">
-											最近，随着十九大报告提出要“着力加快建设实体经济、科技创新、现代金融、人力资源协同发展的产业体系”，“科技创新”和“现代金融”作为产业体系的两个核心要素，在科技和金融领域掀起了一番热潮。区块链技术和法定数字货币可以说是推动“科技创新”和...
+                                            {{ article.description }}
 										</p>
-										<time class="f-l c-gray1"> 2017-07-12  </time>
+										<time class="f-l c-gray1"> {{ article.btime }}  </time>
 										<em class="f-l em-b bgc-cyan tran-sition"></em>
 									</a>
 								</li>
-								<li class="f-l">
-									<a href="#" class="f-l">
-										<em class="f-l em-t bgc-cyan tran-sition"></em>
-										<h2 class="f-l c-white"> 交易场所乱象丛生，区块链识破“幕后推手”  </h2>
-										<p class="f-l p-text c-gray1">
-											随着近年来我国大宗商品电子交易市场的快速发展，一些问题日益突出、风险不断暴露，引起了社会广泛关注。本文主要总结了大宗商品电子交易市场面临的主要问题和潜在风险，并探讨区块链技术是否能够有所帮助。...
-										</p>
-										<time class="f-l c-gray1"> 2017-07-12  </time>
-									  <em class="f-l em-b bgc-cyan tran-sition"></em>
-									</a>
-								</li>						
-								<li class="f-l">
-									<a href="#" class="f-l">
-										<em class="f-l em-t bgc-cyan tran-sition"></em>
-										<h2 class="f-l c-white"> 国务院印发《国家技术转移体系建设方案》，区块链科技成果将加快... </h2>
-										<p class="f-l p-text c-gray1">
-											 9月26日，国务院印发《国家技术转移体系建设方案》（以下简称《方案》），明确提出了加快建设和完善国家技术转移体系的总体思路、发展目标、重点任务和保障措施，部署构建符合科技创新规律、技术转移规律和产业发展规律的国家技术转移体系，全面提升科技...
-										</p>
-										<time class="f-l c-gray1"> 2017-07-12  </time>
-									  <em class="f-l em-b bgc-cyan tran-sition"></em>
-									</a>
-								</li>									
 							</ul>
 						</div>
 						<div class="r-box">
@@ -221,70 +137,30 @@
 				<div class="container">
           <h1 class="f-l c-navy"><i class="iconfont lis-icon"> &#xe607; </i> {{ $t("index.zhuanjia") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.more") }} <i class="iconfont"> &#xe606; </i></a>
+						<a href="/#/talent" class="r-more c-white tran-sition"> {{ $t("common.more") }} <i class="iconfont"> &#xe606; </i></a>
 					</div> 
 					<div class="c-box">
 					  <ul class="f-l">
-					    <li class="f-l" data-aos="zoom-in" data-aos-delay="400">
+					    <li class="f-l" data-aos="zoom-in" data-aos-delay="400" v-for="talent in zhuanjia" :key="talent.id">
 						    <div class="f-l lis-6t">
-						      <h3 class="f-l c-navy"> (兼专家委员会主席) </h3>
+						      <h3 class="f-l c-navy"> {{ talent.title }} </h3>
 						      <p class="f-l c-gray p-text"> 
-						      	清华大学中国经济研究中心副主任、全国人大财经委办公室副主任。1983年调任全国人大财经委员会，先后担任办公室财金组副组长、组长，办公室....
+                                  {{ talent.description }}
 						      </p>
-						      <a href="#" class="f-l c-green r-more1"> Read More </a>
+						      <a :href="`/#/talent/detail/${talent.id}?type=0`" class="f-l c-green r-more1"> Read More </a>
 						      <div class="f-l em-box">
 						        <em class="f-l em-tl bgc-green tran-sition"></em>
 						        <em class="f-l em-br bgc-green tran-sition"></em>
 						      </div>
 					      </div>
 						    <div class="f-l lis-6b bgc-white">
-					        <a href="#" class="f-l pic"><img src="static/images/pic/a6-1.png" class="f-l"/></a>
+					        <a :href="`/#/talent/detail/${talent.id}?type=0`" class="f-l pic"><img :src="talent.avatar" class="f-l"/></a>
 						      <div class="r-box">
-						        <h2 class="f-l c-navy"> 江剑 </h2>
-						        <span class="f-l c-gray"> 名誉院长  </span>
+						        <h2 class="f-l c-navy"> {{ talent.name }} </h2>
+						        <span class="f-l c-gray"> {{ talent.job }} </span>
 					        </div>
 						    </div>
 					    </li>
-					    <li class="f-l bgc-gray" data-aos="zoom-in" data-aos-delay="600">
-					      <div class="f-l lis-6t">
-					    	  <h3 class="f-l c-navy"> 学术委员会主席  </h3>
-                  <p class="f-l c-gray p-text"> 
-                  	中国首位WTO专业方向的经济学博士，博士生导师，首创“入世”一词，2001年成为中国十大新锐人物。曾任外经贸部国际司、办公厅处长,中国...
-                  </p>
-						     	<a href="#" class="f-l c-green r-more1"> Read More </a>
-						      <div class="f-l em-box">
-						        <em class="f-l em-tl bgc-green tran-sition"></em>
-						        <em class="f-l em-br bgc-green tran-sition"></em>
-						      </div>	
-					    	</div>
-					    	<div class="f-l lis-6b bgc-white">
-					    	  <a href="#" class="f-l pic"><img src="static/images/pic/a6-2.png" class="f-l" /></a>
-							    <div class="r-box">
-						        <h2 class="f-l c-navy"> 陈小虎 </h2>
-						        <span class="f-l c-gray"> 学术委员会主席 </span>
-					        </div>
-					    	</div>
-					    </li>	
-					    <li class="f-l bgc-gray" data-aos="zoom-in" data-aos-delay="800">
-					    	<div class="f-l lis-6t">
-						      <h3 class="f-l c-navy"> 中国科学院院长 </h3>
-					    	  <p class="f-l c-gray p-text"> 
-					    	  	中国共产党第十九届中央委员会委员，十三届全国人大常委会委员 ，中国科学院院长，党组书记，学部主席团执行主席，发展中国家科学院院长...
-					    	   </p>
-						     	<a href="#" class="f-l c-green r-more1"> Read More </a>
-						      <div class="f-l em-box">
-						        <em class="f-l em-tl bgc-green tran-sition"></em>
-						        <em class="f-l em-br bgc-green tran-sition"></em>
-						      </div>			
-					    	</div>	
-					    	<div class="f-l lis-6b bgc-white">
-					    	  <a href="#" class="f-l pic"><img src="static/images/pic/a6-3.png" class="f-l" /></a>
-							    <div class="r-box">
-						        <h2 class="f-l c-navy"> 高捷 </h2>
-						        <span class="f-l c-gray"> 中国科学院院长  </span>
-					        </div>
-					    	</div>  	
-					    </li>	
 					  </ul>		
 					</div> 
 				</div>
@@ -294,37 +170,19 @@
 				<div class="container">
           <h1 class="f-l c-navy"><i class="iconfont c-blue1 lis-icon"> &#xe9b4; </i> {{ $t("index.jinghua") }} </h1>
 					<div class="c-box">
-						<a href="#" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
+						<a href="/#/technological" class="r-more c-white tran-sition"> {{ $t("common.more") }}  <i class="iconfont"> &#xe606; </i></a>
 					</div> 
 					<div class="c-box">
 						<ul class="f-l">
-							<li class="f-l" data-aos="zoom-in" data-aos-delay="200">
-								<a href="#" class="f-l pic">
-									<img src="static/images/pic/a7-1.png" class="f-l tran-sition" />
+							<li class="f-l" data-aos="zoom-in" data-aos-delay="200" v-for="article in jinghua" :key="article.id">
+								<a :href="`/#/technological/detail/${article.id}?type=kejiqianyan,jinghua`" class="f-l pic">
+									<img :src="article.banner" class="f-l tran-sition" />
 								</a>
 								<div class="f-l lis-3c"> 
-								  <h2 class="f-l c-navy"> 区块链普惠金融领域落地应用招商合作进行中  </h2>
+								  <h2 class="f-l c-navy"> {{ article.title }} </h2>
 								  <em class="f-l em tran-sition"></em>
 								</div>
 							</li>
-							<li class="f-l" data-aos="zoom-in" data-aos-delay="600">
-								<a href="#" class="f-l pic">
-									<img src="static/images/pic/a7-2.png" class="f-l tran-sition" />
-								</a>
-								<div class="f-l lis-3c"> 
-								  <h2 class="f-l c-navy"> IPFS：区块链存储大文件的一种选择 </h2>
-								  <em class="f-l em tran-sition"></em>
-								</div>
-							</li>			
-							<li class="f-l" data-aos="zoom-in" data-aos-delay="800">
-								<a href="#" class="f-l pic">
-									<img src="static/images/pic/a7-3.png" class="f-l tran-sition" />
-								</a>
-								<div class="f-l lis-3c"> 
-								  <h2 class="f-l c-navy"> 区块链启示：从技术到市场，再到整个社会 </h2>
-								  <em class="f-l em tran-sition"></em>
-								</div>
-							</li>	
 						</ul>
 					</div> 
 				</div>
@@ -337,7 +195,7 @@
           	<div class="l-box lis-8l">
           		<h2 class="f-l c-navy"> {{ $t("index.huiju") }} </h2>
           		<h3 class="f-l c-gray"> {{ $t("index.huijudetail") }} </h3>
-              <a href="#" class="btn-1 bgc-blue1 bgc-green1-h c-white tran-sition"> {{ $t("index.go") }} </a>
+              <a href="/#/about" class="btn-1 bgc-blue1 bgc-green1-h c-white tran-sition"> {{ $t("index.go") }} </a>
           	</div>
 						<div class="r-box">
 							<div class="animation-box">
@@ -375,28 +233,86 @@
 
 <script>
     import { mapActions } from 'vuex';
-
+    import { getArticleList, getTalentList } from '@/services/CommonService';
     export default {
         data () {
             return {
-                loading: true
+                loading: true,
+                salonFengcai: [],
+                newsZixun: [],
+                newsHangye: [],
+                zhuanjia: [],
+                jinghua: []
             };
         },
         computed: { },
 
         mounted () {
             window.AOS.init();
-            this.loading = false;
+            this._getSalonArticle();
+            this._getZixunArticle();
+            this._getHangyeArticle();
+            this._getZhuanjiaArticle();
+            this._getJinghuaArticle();
         },
 
         destroyed () {
         },
-
         watch: { },
         methods: {
             ...mapActions({
                 setKeywords: 'setKeywords'
-            })
+            }),
+            _getSalonArticle () {
+                getArticleList({
+                    status: 1,
+                    category: ['salon', 'fengcai', 'wenzhang'],
+                    page: 1,
+                    page_size: 3
+                }).then(res => {
+                    this.salonFengcai = res.body.data.list;
+                });
+            },
+            _getZixunArticle () {
+                getArticleList({
+                    status: 1,
+                    category: ['xinwenzhongxin', 'qukuailian'],
+                    page: 1,
+                    page_size: 4
+                }).then(res => {
+                    this.newsZixun = res.body.data.list;
+                });
+            },
+            _getHangyeArticle () {
+                getArticleList({
+                    status: 1,
+                    category: ['xinwenzhongxin', 'hangye'],
+                    page: 1,
+                    page_size: 3
+                }).then(res => {
+                    this.newsHangye = res.body.data.list;
+                });
+            },
+            _getZhuanjiaArticle () {
+                getTalentList({
+                    status: 1,
+                    category: '0',
+                    page: 1,
+                    page_size: 3
+                }).then(res => {
+                    this.zhuanjia = res.body.data.list;
+                });
+            },
+            _getJinghuaArticle () {
+                getArticleList({
+                    status: 1,
+                    category: ['kejiqianyan', 'jinghua'],
+                    page: 1,
+                    page_size: 3
+                }).then(res => {
+                    this.jinghua = res.body.data.list;
+                });
+            }
         },
         components: { }
     };

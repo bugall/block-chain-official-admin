@@ -80,15 +80,19 @@
             _getArticleList () {
                 getArticleList({
                     status: 1,
-                    category: ['about', 'shenqing', 'qunchengyuan'].join(',')
+                    category: ['about', 'shenqing', 'qunchengyuan'].join(','),
+                    page_size: 1,
+                    page: 1
                 }).then(res => {
-                    this.group = res.body.data.list[0];
+                    this.group = res.body.data.list[0] || {};
                 });
                 getArticleList({
                     status: 1,
-                    category: ['about', 'shenqing', 'gerenhuiyuan'].join(',')
+                    category: ['about', 'shenqing', 'gerenhuiyuan'].join(','),
+                    page_size: 1,
+                    page: 1
                 }).then(res => {
-                    this.person = res.body.data.list[0];
+                    this.person = res.body.data.list[0] || {};
                 });
             }
         },

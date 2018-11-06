@@ -5,7 +5,7 @@
 	        <li class="f-l" v-for="article in articleList" :key="article.id">
 	        	<div class="c-box">
 	        		<div class="l-box">
-	        		  <a :href="`/#/news/detail/${article.id}`" class="f-l pic">
+	        		  <a :href="`/#/news/detail/${article.id}?type=xinwenzhongxin,qukuailian`" class="f-l pic">
 	        			  <img :src="article.banner" class="f-l img tran-sition" />
 	        		  </a>
 	        		  <time class="f-l c-gray"> {{ article.btime }}  </time>

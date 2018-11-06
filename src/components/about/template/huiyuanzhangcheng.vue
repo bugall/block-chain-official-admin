@@ -27,9 +27,11 @@
             _getArticleList () {
                 getArticleList({
                     status: 1,
-                    category: this.category.join(',')
+                    category: this.category.join(','),
+                    page_size: 1,
+                    page: 1
                 }).then(res => {
-                    this.article = res.body.data.list[0];
+                    this.article = res.body.data.list[0] || {};
                 });
             },
             handleSizeChange (val) {

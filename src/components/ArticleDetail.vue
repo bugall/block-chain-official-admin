@@ -52,7 +52,7 @@
     };
 </script>
 
-<style>
+<style scoped>
     @media screen and (max-width: 720px){
         .ql-container img {
             width: 100% !important;

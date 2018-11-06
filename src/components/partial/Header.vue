@@ -60,9 +60,14 @@
                 if (this.keywords !== this.search) {
                     this.search = this.keywords;
                 }
-            }
+            },
+            '$route': 'routeReset'
         },
         methods: {
+            routeReset () {
+                const path = this.$route.path;
+                this.currentTab = path.split('/')[1];
+            },
             navTabClick (element) {
                 const router = this.$router;
                 this.currentTab = element.target.getAttribute('data-type');
