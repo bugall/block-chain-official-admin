@@ -8,7 +8,7 @@
 	        		  <a :href="`/#/news/detail/${article.id}?type=xinwenzhongxin,qukuailian`" class="f-l pic">
 	        			  <img :src="article.banner" class="f-l img tran-sition" />
 	        		  </a>
-	        		  <time class="f-l c-gray"> {{ article.btime }}  </time>
+	        		  <time class="f-l c-gray"> {{ new Date(article.btime).format('yyyy-MM-dd') }}  </time>
 	        		</div>
 	        		<div class="r-box">
 	        		  <h2 class="f-l c-navy"> {{ article.title }}  </h2>

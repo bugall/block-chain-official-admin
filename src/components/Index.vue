@@ -36,8 +36,7 @@
           		<h2 class="f-l c-navy"> 
           			{{ $t("index.joinDetail") }}
               </h2>
-              <a href="#" class="btn-1 bgc-blue1 bgc-green1-h c-white tran-sition"> {{ $t("index.joinApply") }} </a>
-              <time class="f-l c-gray"> 2017-08-20 14:00 ~ 2017-08-20 18:00  </time>
+              <a href="/#/salon" class="btn-1 bgc-blue1 bgc-green1-h c-white tran-sition"> {{ $t("index.joinApply") }} </a>
           	</div>
           	<div class="r-box" data-aos="zoom-in" data-aos-delay="300">
           		<div class="animation-box">
@@ -67,7 +66,7 @@
 								<div class="f-l lis-3c"> 
 								  <h2 class="f-l c-navy"> {{ article.title }} </h2>
 								  <em class="f-l em tran-sition"></em>
-								  <time class="f-l c-gray bgc-blue4"> {{ article.btime }} ~ {{ article.etime }}  </time>
+								  <time class="f-l c-gray bgc-blue4"> {{ new Date(article.btime).format('yyyy-MM-dd hh:mm') }} ~ {{ new Date(article.etime).format('yyyy-MM-dd hh:mm') }}  </time>
 								</div>
 							</li>
 						</ul>
@@ -88,7 +87,7 @@
 								  <a :href="`/#/news/detail/${article.id}?type=xinwenzhongxin,qukuailian`" class="f-l pic">
 									  <img :src="article.banner" class="f-l img tran-sition" />
 								  </a>
-								  <time class="f-l c-gray"> {{ article.btime }}  </time>
+								  <time class="f-l c-gray"> {{ new Date(article.btime).format('yyyy-MM-dd') }}  </time>
 								</div>
 								<div class="r-box">
 								  <h2 class="f-l c-navy"> {{ article.title }} </h2>
@@ -120,7 +119,7 @@
 										<p class="f-l p-text c-gray1">
                                             {{ article.description }}
 										</p>
-										<time class="f-l c-gray1"> {{ article.btime }}  </time>
+										<time class="f-l c-gray1"> {{ new Date(article.btime).format('yyyy-MM-dd') }}  </time>
 										<em class="f-l em-b bgc-cyan tran-sition"></em>
 									</a>
 								</li>
@@ -266,7 +265,7 @@
             _getSalonArticle () {
                 getArticleList({
                     status: 1,
-                    category: ['salon', 'fengcai', 'wenzhang'],
+                    category: ['salon', 'fengcai', 'wenzhang'].join(','),
                     page: 1,
                     page_size: 3
                 }).then(res => {
@@ -276,7 +275,7 @@
             _getZixunArticle () {
                 getArticleList({
                     status: 1,
-                    category: ['xinwenzhongxin', 'qukuailian'],
+                    category: ['xinwenzhongxin', 'qukuailian'].join(','),
                     page: 1,
                     page_size: 4
                 }).then(res => {
@@ -286,7 +285,7 @@
             _getHangyeArticle () {
                 getArticleList({
                     status: 1,
-                    category: ['xinwenzhongxin', 'hangye'],
+                    category: ['xinwenzhongxin', 'hangye'].join(','),
                     page: 1,
                     page_size: 3
                 }).then(res => {
@@ -306,7 +305,7 @@
             _getJinghuaArticle () {
                 getArticleList({
                     status: 1,
-                    category: ['kejiqianyan', 'jinghua'],
+                    category: ['kejiqianyan', 'jinghua'].join(','),
                     page: 1,
                     page_size: 3
                 }).then(res => {

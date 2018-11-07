@@ -6,7 +6,7 @@
             	<img src="static/images/pic/t4-1.png" class="" />
             	<h2 class="f-l c-navy"> {{ article.title }} </h2>
             	<a :href="article.resource_url" target="_blank" :download="article.resource_url" class="f-l c-gray2 c-green-h"> {{ $t("common.downloadResource") }}   </a>
-              <time class="f-l c-gray"> {{ $t("common.uploadTime") }}： {{ article.btime }} </time>
+              <time class="f-l c-gray"> {{ $t("common.uploadTime") }}： {{ new Date(article.btime).format('yyyy-MM-dd') }} </time>
             </li>
         </div>
         

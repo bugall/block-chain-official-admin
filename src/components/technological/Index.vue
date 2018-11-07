@@ -18,9 +18,11 @@
       	            </div>
 
           	        <div class="f-l bd" style="min-height: 1000px; width: 100%">
+                          <transition name="fade" mode="out-in">
                         <v-jishujinghua v-if="this.currentTab === 'jinghua' && !this.showDetail"></v-jishujinghua>
                         <v-kejixianfeng v-else-if="this.currentTab === 'xianfeng' && !this.showDetail"></v-kejixianfeng>
                         <v-detail v-else-if="this.showDetail"></v-detail>
+                        </transition>
           	        </div>
       	        </div>
 			</section>		

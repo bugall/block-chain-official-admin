@@ -14,7 +14,7 @@
           		<p class="f-l p-text c-gray">
                     {{ article.description }}
           		</p>
-          		<time class="f-l c-navy"><span class="f-l c-gray"> {{ $t("common.time") }}: </span>  {{ article.btime }} ~ {{ article.etime }}  </time>
+          		<time class="f-l c-navy"><span class="f-l c-gray"> {{ $t("common.time") }}: </span>  {{ new Date(article.btime).format('yyyy-MM-dd hh:mm') }} ~ {{ new Date(article.etime).format('yyyy-MM-dd hh:mm') }}  </time>
           		<address class="f-l c-navy">
           		  <span class="f-l c-gray"> {{ $t("common.address") }}: </span> {{ article.address }}
           		</address>

@@ -10,7 +10,7 @@
     					<p class="f-l p-text c-gray">
                             {{ article.description }}
     					</p>
-    					<time class="f-l c-gray3"> {{ article.btime }}  </time>
+    					<time class="f-l c-gray3"> {{ new Date(article.btime).format('yyyy-MM-dd') }}  </time>
     					<em class="f-l em-b bgc-green tran-sition"></em>
     				</a>
     			</div>

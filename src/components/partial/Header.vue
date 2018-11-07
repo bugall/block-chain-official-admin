@@ -83,6 +83,7 @@
                 this.setKeywords({keywords: this.search});
             },
             switchLanguage (locale) {
+                window.location.reload();
                 this.language = this.language === 'zh' ? 'en' : 'zh';
                 set_item('language', this.language);
                 this._i18n.locale = this.language;

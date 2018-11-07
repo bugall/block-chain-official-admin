@@ -19,11 +19,13 @@
           		</ul>
           	</div>
           	<div class="f-l bd" style="min-height: 1000px">
-                  <v-fengcai v-if="this.currentTab === 'fengcai' && !this.showDetail"></v-fengcai>
-                  <v-huodong v-else-if="this.currentTab === 'huodong' && !this.showDetail"></v-huodong>
-                  <v-jieshao v-else-if="this.currentTab === 'jieshao' && !this.showDetail"></v-jieshao>
-                  <v-ziliao v-else-if="this.currentTab === 'ziliao' && !this.showDetail"></v-ziliao>
-                  <v-detail v-else-if="this.showDetail"></v-detail>
+                  <transition name="fade" mode="out-in">
+                    <v-fengcai v-if="this.currentTab === 'fengcai' && !this.showDetail"></v-fengcai>
+                    <v-huodong v-else-if="this.currentTab === 'huodong' && !this.showDetail"></v-huodong>
+                    <v-jieshao v-else-if="this.currentTab === 'jieshao' && !this.showDetail"></v-jieshao>
+                    <v-ziliao v-else-if="this.currentTab === 'ziliao' && !this.showDetail"></v-ziliao>
+                    <v-detail v-else-if="this.showDetail"></v-detail>
+                  </transition>
           	</div>
           </div>
 				</div>

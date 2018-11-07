@@ -19,10 +19,12 @@
           		</ul>
           	</div>
           	<div class="f-l bd"  style="min-height: 1000px">
+                  <transition name="fade" mode="out-in">
                   <v-zuzhijiagou v-if="this.currentTab === 'zuzhijiagou'"></v-zuzhijiagou>
                   <v-yanjiuyuan v-else-if="this.currentTab === 'yanjiuyuan'"></v-yanjiuyuan>
                   <v-huiyuanzhangcheng v-else-if="this.currentTab === 'huiyuanzhangcheng'"></v-huiyuanzhangcheng>
                   <v-huiyuanshenqing v-else-if="this.currentTab === 'huiyuanshenqing'"></v-huiyuanshenqing>
+                  </transition>
           	</div>
           </div>
 				</div>

@@ -10,7 +10,7 @@
 		    	</div>
 		    	<div class="r-box">
 		    	  <h2 class="f-l c-navy">  {{ article.title }} </h2>
-		    	  <time class="f-l c-gray"> {{ article.btime }} </time>
+		    	  <time class="f-l c-gray"> {{ new Date(article.btime).format('yyyy-MM-dd') }} </time>
 		    	</div>
 		    	<div class="c-box">
 		    	  <em class="f-l em tran-sition"></em>

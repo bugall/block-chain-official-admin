@@ -15,7 +15,7 @@
 							<div class="f-l div-c"> 
 							    <h2 class="f-l c-navy"> {{ article.title }} </h2>
 							    <em class="f-l em tran-sition"></em>
-							    <time class="f-l c-gray"> {{ article.btime }} ~ {{ article.etime }}  </time>
+							    <time class="f-l c-gray"> {{ new Date(article.btime).format('yyyy-MM-dd hh:mm') }} ~ {{ new Date(article.etime).format('yyyy-MM-dd hh:mm') }}  </time>
 							</div>
 						</li>										
                   	</ul>

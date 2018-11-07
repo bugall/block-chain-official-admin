@@ -20,11 +20,13 @@
       	            </div>
 
           	        <div class="f-l bd" style="min-height: 1000px; width: 100%">
+                          <transition name="fade" mode="out-in">
                         <v-jishuchuangxin v-if="this.currentTab === 'jishuchuangxin' && !this.showDetail"></v-jishuchuangxin>
                         <v-qukuairencai v-else-if="this.currentTab === 'qukuairencai' && !this.showDetail"></v-qukuairencai>
                         <v-xueshuweiyuan v-else-if="this.currentTab === 'xueshuweiyuan' && !this.showDetail"></v-xueshuweiyuan>
                         <v-zhuanjiaweiyuan v-else-if="this.currentTab === 'zhuanjiaweiyuan' && !this.showDetail"></v-zhuanjiaweiyuan>
                         <v-detail v-else-if="this.showDetail"></v-detail>
+                        </transition>
           	        </div>
       	        </div>
 			</section>		

@@ -4,7 +4,7 @@
     	<ul class="f-l lis-listab-d1" style="width: 100%"> 
             <div class="f-l sub-title bdr-b" style="width: 100%">
                 <h2 class="f-l c-navy"><em class="em-1"></em> {{ article.title }} </h2>
-                <span class="f-l c-gray"> Release time：{{ article.created_at}}  </span>
+                <span class="f-l c-gray"> Release time：{{ new Date(article.created_at).format('yyyy-MM-dd')}}  </span>
             </div>              
 
     	</ul>

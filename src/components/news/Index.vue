@@ -17,9 +17,11 @@
           		</ul>
           	</div>
           	<div class="f-l bd"  style="min-height: 1000px">
+                  <transition name="fade" mode="out-in">
                   <v-qukuailianzixun v-if="this.currentTab === 'qukuailianzixun' && !this.showDetail"></v-qukuailianzixun>
                   <v-hangyezixun v-else-if="this.currentTab === 'hangyezixun' && !this.showDetail"></v-hangyezixun>
                   <v-detail v-else-if="this.showDetail"></v-detail>
+                  </transition>
           	</div>
           </div>
 				</div>
